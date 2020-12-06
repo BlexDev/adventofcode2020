@@ -102,8 +102,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Center(
-        child: Text('You have pressed the button $_counter times.'),
+      body: Container(
+        height: 100,
+        width: 100,
+        child: TextField(
+          expands: true,
+          minLines: null,
+          maxLines: null,
+          onChanged: (text) {
+            print("First text field: $text");
+          },
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
