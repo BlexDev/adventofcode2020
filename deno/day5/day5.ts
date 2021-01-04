@@ -40,3 +40,15 @@ console.log(
     .sort((a, b) => a - b)
     .pop()
 );
+console.log('Second part: ');
+lines
+  .map(getId)
+  .sort((a, b) => a - b)
+  .forEach((seatNumber, index, array) => {
+    if (index + 1 < array.length) {
+      if (seatNumber + 1 !== array[index + 1]) {
+        console.log(array[index], array[index + 1]);
+        console.log('Missing: ', array[index] + 1);
+      }
+    }
+  });
